@@ -1,0 +1,6 @@
+c:\users\joao.pio\documents\visual studio 2015\Projects\MovieLibrary\MovieLibrary\bin\Debug\MovieLibrary.exe.config
+c:\users\joao.pio\documents\visual studio 2015\Projects\MovieLibrary\MovieLibrary\bin\Debug\MovieLibrary.exe
+c:\users\joao.pio\documents\visual studio 2015\Projects\MovieLibrary\MovieLibrary\bin\Debug\MovieLibrary.pdb
+c:\users\joao.pio\documents\visual studio 2015\Projects\MovieLibrary\MovieLibrary\obj\Debug\MovieLibrary.csprojResolveAssemblyReference.cache
+c:\users\joao.pio\documents\visual studio 2015\Projects\MovieLibrary\MovieLibrary\obj\Debug\MovieLibrary.exe
+c:\users\joao.pio\documents\visual studio 2015\Projects\MovieLibrary\MovieLibrary\obj\Debug\MovieLibrary.pdb

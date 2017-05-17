@@ -1,0 +1,6 @@
+C:\Users\joao.pio\Documents\Visual Studio 2015\Projects\MovieLibrary\Grades.Tests\bin\Debug\Grades.Tests.dll
+C:\Users\joao.pio\Documents\Visual Studio 2015\Projects\MovieLibrary\Grades.Tests\bin\Debug\Grades.Tests.pdb
+C:\Users\joao.pio\Documents\Visual Studio 2015\Projects\MovieLibrary\Grades.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\joao.pio\Documents\Visual Studio 2015\Projects\MovieLibrary\Grades.Tests\obj\Debug\Grades.Tests.csprojResolveAssemblyReference.cache
+C:\Users\joao.pio\Documents\Visual Studio 2015\Projects\MovieLibrary\Grades.Tests\obj\Debug\Grades.Tests.dll
+C:\Users\joao.pio\Documents\Visual Studio 2015\Projects\MovieLibrary\Grades.Tests\obj\Debug\Grades.Tests.pdb

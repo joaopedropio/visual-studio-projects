@@ -15,11 +15,11 @@ namespace MovieLibrary.Tests
         public void AddMovieTest()
         {
             Movie harrypotter = new Movie("Harry Potter e a Pedra Filosofal", "Fantasia", "O pequeno rapaz com a cabeça rachada passara por varias trapalhadas no mundo magico de Hogwarts", "X", "English");
-            Assert.AreEqual("Fantasia", harrypotter.GetGenre());
+            Assert.AreEqual("Fantasia", harrypotter.Genre);
             Assert.AreEqual("O pequeno rapaz com a cabeça rachada passara por varias trapalhadas no mundo magico de Hogwarts", harrypotter.GetDescription());
-            Assert.AreEqual("X", harrypotter.GetDirector());
-            Assert.AreEqual("English", harrypotter.GetLanguage());
-            Assert.AreEqual("Harry Potter e a Pedra Filosofal", harrypotter.GetName());
+            Assert.AreEqual("X", harrypotter.Director);
+            Assert.AreEqual("English", harrypotter.Language);
+            Assert.AreEqual("Harry Potter e a Pedra Filosofal", harrypotter.Name);
         }
 
         [TestMethod]

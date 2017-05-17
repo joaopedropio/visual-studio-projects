@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace MovieLibrary
 {
-    class ShowDataDelegate : EventArgs
+    class ShowDataDelegate : EventArgs, IShowDataDelegate
     {
-        
+        public void GetSomething()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

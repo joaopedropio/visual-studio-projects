@@ -8,11 +8,11 @@ namespace MovieLibrary
 {
     public class Movie
     {
-        string Name;
-        string Genre;
-        string Description;
-        string Director;
-        string Language;
+        public string Name { get; private set; }
+        public string Genre { get; private set; }
+        public string Description{ get; private set; }
+        public string Director { get; private set; }
+        public string Language { get; private set; }
 
         public Movie(string name, string genre, string description, string director, string language)
         {
@@ -31,31 +31,6 @@ namespace MovieLibrary
             //Console.WriteLine("Diretor: " + Director);
             //Console.WriteLine("Linguagem: " + Language);
             Console.WriteLine();
-        }
-
-        public string GetGenre()
-        {
-            return Genre;
-        }
-
-        public string GetName()
-        {
-            return Name;
-        }
-
-        public string GetDescription()
-        {
-            return Description;
-        }
-
-        public string GetDirector()
-        {
-            return Director;
-        }
-
-        public string GetLanguage()
-        {
-            return Language;
         }
     }
 }

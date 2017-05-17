@@ -30,19 +30,19 @@ namespace MovieLibrary
             {
                 case "nome":
                     {
-                        return movies.Find(x => String.Equals(x.GetName(), search, StringComparison.InvariantCultureIgnoreCase));
+                        return movies.Find(x => String.Equals(x.Name, search, StringComparison.InvariantCultureIgnoreCase));
                     }
                 case "diretor":
                     {
-                        return movies.Find(x => x.GetDirector() == search);
+                        return movies.Find(x => x.Director == search);
                     }
                  case "genero":
                     {
-                        return movies.Find(x => x.GetGenre() == search);
+                        return movies.Find(x => x.Genre == search);
                     }
                  case "linguagem":
                     {
-                        return movies.Find(x => x.GetLanguage() == search);
+                        return movies.Find(x => x.Language== search);
                     }
                 default:
                     {

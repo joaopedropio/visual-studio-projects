@@ -173,9 +173,5 @@ namespace MovieLibrary
             library.AddMovie(movie);
         }
 
-        private int getOption()
-        {
-            return int.Parse(Console.ReadLine());
-        }
     }
 }

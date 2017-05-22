@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Supermarket
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
         }
@@ -48,7 +48,9 @@ namespace Supermarket
 
         private void btnNewCustomer_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Form newClient = new NewClientForm();
+            newClient.Show();
         }
     }
 }

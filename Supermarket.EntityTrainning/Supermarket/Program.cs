@@ -16,7 +16,8 @@ namespace Supermarket
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            LoginForm main = new LoginForm();
+            Application.Run(main);
             /*
             var user = new UserControl();
             var users = user.List();

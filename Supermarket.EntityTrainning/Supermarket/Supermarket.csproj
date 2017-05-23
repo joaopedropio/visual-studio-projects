@@ -56,27 +56,36 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Customer.cs" />
-    <Compile Include="LoginForm.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Migrations\201705231902282_Initial.cs" />
+    <Compile Include="Migrations\201705231902282_Initial.Designer.cs">
+      <DependentUpon>201705231902282_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NewClientForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NewClientForm.Designer.cs">
       <DependentUpon>NewClientForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Order.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <Compile Include="SupermarketContext.cs" />
+    <EmbeddedResource Include="Migrations\201705231902282_Initial.resx">
+      <DependentUpon>201705231902282_Initial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewClientForm.resx">
       <DependentUpon>NewClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

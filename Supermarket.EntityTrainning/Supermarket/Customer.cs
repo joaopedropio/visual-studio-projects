@@ -11,7 +11,7 @@ namespace Supermarket
         public int Id { get; set; }
         public string Name { get; set; }
         public string Login { get; set; }
-        public byte[] Password { get; set; }
+        public string Password { get; set; }
         public string Adress { get; set; }
         public string CreditCard { get; set; }
 

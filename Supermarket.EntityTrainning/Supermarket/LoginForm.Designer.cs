@@ -50,7 +50,7 @@
             this.btnLogin.Location = new System.Drawing.Point(315, 269);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(75, 23);
-            this.btnLogin.TabIndex = 1;
+            this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnOk_Click);
@@ -79,14 +79,15 @@
             this.txtPassword.Location = new System.Drawing.Point(286, 219);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(160, 20);
-            this.txtPassword.TabIndex = 4;
+            this.txtPassword.TabIndex = 1;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // btnNewCustomer
             // 
             this.btnNewCustomer.Location = new System.Drawing.Point(246, 322);
             this.btnNewCustomer.Name = "btnNewCustomer";
             this.btnNewCustomer.Size = new System.Drawing.Size(217, 23);
-            this.btnNewCustomer.TabIndex = 5;
+            this.btnNewCustomer.TabIndex = 3;
             this.btnNewCustomer.Text = "Novo? Cadastre-se para fazer compras";
             this.btnNewCustomer.UseCompatibleTextRendering = true;
             this.btnNewCustomer.UseVisualStyleBackColor = true;
@@ -102,7 +103,7 @@
             this.lblLogo.TabIndex = 6;
             this.lblLogo.Text = "Logo";
             // 
-            // Form1
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -114,7 +115,7 @@
             this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtLogin);
-            this.Name = "Form1";
+            this.Name = "LoginForm";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();

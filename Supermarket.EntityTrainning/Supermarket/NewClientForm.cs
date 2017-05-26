@@ -25,7 +25,7 @@ namespace Supermarket
 
         private void txtName_TextChanged(object sender, EventArgs e)
         {
-            if (txtName.ToString().Length <= 10)
+            if (txtName.Text.ToString().Length < (int) Requirements.Name)
             {
                 lblNameWarning.Visible = true;
             }
@@ -37,12 +37,50 @@ namespace Supermarket
 
         private void txtLogin_TextChanged(object sender, EventArgs e)
         {
-            
+            if (txtLogin.Text.ToString().Length < (int)Requirements.Login)
+            {
+                lblLoginWarning.Text = "Login muito curto";
+            }
+            else
+            {
+                lblLoginWarning.Text = "";
+            }
         }
 
         private void btnSubscribe_Click(object sender, EventArgs e)
         {
-            AddCustomer();
+            if (txtCreditCard.Text.ToString().Length < (int)Requirements.CreditCard ||
+                txtLogin.Text.ToString().Length < (int)Requirements.Login ||
+                txtName.Text.ToString().Length < (int)Requirements.Name ||
+                txtPasswordCheck.Text.ToString() != txtPassword.Text.ToString() ||
+                txtPassword.Text.ToString().Length < (int)Requirements.Password)
+            {
+                MessageBox.Show("Dados inconsistentes!");
+                return;
+            }
+            if(!NewClienteExists())
+            {
+                AddCustomer();
+            }
+            else
+            {
+                MessageBox.Show("Usuário já existente!");
+            }
+        }
+
+        private bool NewClienteExists()
+        {
+            using(SupermarketContext context = new SupermarketContext())
+            {
+                if(context.Customers.Any(n => n.Login == txtLogin.Text.ToString()))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
         }
 
         private void AddCustomer()
@@ -77,20 +115,52 @@ namespace Supermarket
             return Encoding.UTF8.GetString(hashedPassword);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void NewClientForm_Load(object sender, EventArgs e)
         {
-            using(SupermarketContext context = new SupermarketContext())
+
+        }
+
+        private void txtCreditCard_TextChanged(object sender, EventArgs e)
+        {
+            if(txtCreditCard.Text.ToString().Length < (int)Requirements.CreditCard)
             {
-                Customer customer = context.Customers.Where(n => n.Login == "joao").FirstOrDefault();
-                if(customer != null)
-                {
-                        MessageBox.Show("hash crtinho");
-                }
-                else
-                {
-                    MessageBox.Show("nao tem ninguem com esse login");
-                }
+                lblCreditCardWarning.Text = "Cartao de credito inválido";
             }
+            else
+            {
+                lblCreditCardWarning.Text = "";
+            }
+
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            if(txtPassword.Text.ToString().Length < (int)Requirements.Password)
+            {
+                lblPasswordWarning.Text = "Senha muito curta";
+            }
+            else
+            {
+                lblPasswordWarning.Text = "";
+            }
+        }
+
+        private void txtPasswordCheck_TextChanged(object sender, EventArgs e)
+        {
+            if(txtPassword.Text != txtPasswordCheck.Text)
+            {
+                lblPasswordCheckWarning.Text = "Senhas não conferem!";
+            }
+            else
+            {
+                lblPasswordCheckWarning.Text = "";
+            }
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

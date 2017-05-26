@@ -15,5 +15,15 @@ namespace Supermarket
         [Required]
         public Dictionary<int, Product> List { get; set; }
         public DateTime Date { get; set; }
+
+        public double TotalPrice()
+        {
+            double total = 0;
+            foreach (var item in List)
+            {
+                total += item.Key * item.Value.Price;
+            }
+            return total;
+        }
     }
 }

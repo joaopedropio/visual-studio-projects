@@ -28,14 +28,20 @@ namespace Supermarket
         {
             using (SupermarketContext context = new SupermarketContext())
             {
-                Customer customer = context.Customers.Where(n => n.Login == txtLogin.Text.ToString()).FirstOrDefault();
-                if (customer != null && customer.Password == Hash(txtPassword.Text.ToString()))
+                string hashedPassword = Hash(txtPassword.Text.ToString());
+                if (context.Customers.Any(n => n.Login == txtLogin.Text.ToString() && n.Password == hashedPassword))
                 {
-                    MessageBox.Show("logou co sucess");
+                    lblLoginWarning.Visible = false;
+                    this.Visible = false;
+                    Main main = new Main();
+                    main.ShowDialog();
+                    main.Close();
+                    this.Visible = true;
                 }
                 else
                 {
-                    MessageBox.Show("Deu ruim");
+                    MessageBox.Show("Usuario ou senha incorretos");
+                    lblLoginWarning.Visible = true;
                 }
             }
 
@@ -62,6 +68,11 @@ namespace Supermarket
         }
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
         {
 
         }

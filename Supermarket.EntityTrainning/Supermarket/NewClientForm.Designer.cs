@@ -44,7 +44,11 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSubscribe = new System.Windows.Forms.Button();
             this.lblNameWarning = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lblLoginWarning = new System.Windows.Forms.Label();
+            this.lblAddressWarning = new System.Windows.Forms.Label();
+            this.lblCreditCardWarning = new System.Windows.Forms.Label();
+            this.lblPasswordWarning = new System.Windows.Forms.Label();
+            this.lblPasswordCheckWarning = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -106,7 +110,7 @@
             this.txtName.Location = new System.Drawing.Point(255, 123);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(196, 20);
-            this.txtName.TabIndex = 6;
+            this.txtName.TabIndex = 1;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // txtLogin
@@ -114,7 +118,7 @@
             this.txtLogin.Location = new System.Drawing.Point(255, 158);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(100, 20);
-            this.txtLogin.TabIndex = 7;
+            this.txtLogin.TabIndex = 2;
             this.txtLogin.TextChanged += new System.EventHandler(this.txtLogin_TextChanged);
             // 
             // txtAddress
@@ -122,14 +126,15 @@
             this.txtAddress.Location = new System.Drawing.Point(255, 192);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(196, 20);
-            this.txtAddress.TabIndex = 8;
+            this.txtAddress.TabIndex = 3;
             // 
             // txtCreditCard
             // 
             this.txtCreditCard.Location = new System.Drawing.Point(255, 221);
             this.txtCreditCard.Name = "txtCreditCard";
             this.txtCreditCard.Size = new System.Drawing.Size(196, 20);
-            this.txtCreditCard.TabIndex = 9;
+            this.txtCreditCard.TabIndex = 4;
+            this.txtCreditCard.TextChanged += new System.EventHandler(this.txtCreditCard_TextChanged);
             // 
             // txtPassword
             // 
@@ -137,7 +142,8 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(100, 20);
-            this.txtPassword.TabIndex = 10;
+            this.txtPassword.TabIndex = 5;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // txtPasswordCheck
             // 
@@ -145,34 +151,36 @@
             this.txtPasswordCheck.Name = "txtPasswordCheck";
             this.txtPasswordCheck.PasswordChar = '*';
             this.txtPasswordCheck.Size = new System.Drawing.Size(100, 20);
-            this.txtPasswordCheck.TabIndex = 11;
+            this.txtPasswordCheck.TabIndex = 6;
+            this.txtPasswordCheck.TextChanged += new System.EventHandler(this.txtPasswordCheck_TextChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Monaco", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(153, 32);
+            this.label7.Location = new System.Drawing.Point(246, 21);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(198, 51);
             this.label7.TabIndex = 12;
             this.label7.Text = "Cadastro";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(141, 379);
+            this.btnCancel.Location = new System.Drawing.Point(141, 350);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 13;
+            this.btnCancel.Size = new System.Drawing.Size(148, 52);
+            this.btnCancel.TabIndex = 8;
             this.btnCancel.Text = "Cancelar";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSubscribe
             // 
-            this.btnSubscribe.Location = new System.Drawing.Point(321, 378);
+            this.btnSubscribe.Location = new System.Drawing.Point(431, 350);
             this.btnSubscribe.Name = "btnSubscribe";
-            this.btnSubscribe.Size = new System.Drawing.Size(75, 23);
-            this.btnSubscribe.TabIndex = 14;
+            this.btnSubscribe.Size = new System.Drawing.Size(168, 52);
+            this.btnSubscribe.TabIndex = 7;
             this.btnSubscribe.Text = "Cadastrar";
             this.btnSubscribe.UseVisualStyleBackColor = true;
             this.btnSubscribe.Click += new System.EventHandler(this.btnSubscribe_Click);
@@ -188,22 +196,58 @@
             this.lblNameWarning.Text = "Nome muito curto";
             this.lblNameWarning.Visible = false;
             // 
-            // button1
+            // lblLoginWarning
             // 
-            this.button1.Location = new System.Drawing.Point(569, 377);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.lblLoginWarning.AutoSize = true;
+            this.lblLoginWarning.ForeColor = System.Drawing.Color.Red;
+            this.lblLoginWarning.Location = new System.Drawing.Point(509, 158);
+            this.lblLoginWarning.Name = "lblLoginWarning";
+            this.lblLoginWarning.Size = new System.Drawing.Size(0, 13);
+            this.lblLoginWarning.TabIndex = 17;
+            // 
+            // lblAddressWarning
+            // 
+            this.lblAddressWarning.AutoSize = true;
+            this.lblAddressWarning.Location = new System.Drawing.Point(509, 192);
+            this.lblAddressWarning.Name = "lblAddressWarning";
+            this.lblAddressWarning.Size = new System.Drawing.Size(0, 13);
+            this.lblAddressWarning.TabIndex = 18;
+            // 
+            // lblCreditCardWarning
+            // 
+            this.lblCreditCardWarning.AutoSize = true;
+            this.lblCreditCardWarning.ForeColor = System.Drawing.Color.Red;
+            this.lblCreditCardWarning.Location = new System.Drawing.Point(509, 221);
+            this.lblCreditCardWarning.Name = "lblCreditCardWarning";
+            this.lblCreditCardWarning.Size = new System.Drawing.Size(0, 13);
+            this.lblCreditCardWarning.TabIndex = 19;
+            // 
+            // lblPasswordWarning
+            // 
+            this.lblPasswordWarning.AutoSize = true;
+            this.lblPasswordWarning.Location = new System.Drawing.Point(509, 253);
+            this.lblPasswordWarning.Name = "lblPasswordWarning";
+            this.lblPasswordWarning.Size = new System.Drawing.Size(0, 13);
+            this.lblPasswordWarning.TabIndex = 20;
+            // 
+            // lblPasswordCheckWarning
+            // 
+            this.lblPasswordCheckWarning.AutoSize = true;
+            this.lblPasswordCheckWarning.Location = new System.Drawing.Point(509, 290);
+            this.lblPasswordCheckWarning.Name = "lblPasswordCheckWarning";
+            this.lblPasswordCheckWarning.Size = new System.Drawing.Size(0, 13);
+            this.lblPasswordCheckWarning.TabIndex = 21;
             // 
             // NewClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(713, 443);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lblPasswordCheckWarning);
+            this.Controls.Add(this.lblPasswordWarning);
+            this.Controls.Add(this.lblCreditCardWarning);
+            this.Controls.Add(this.lblAddressWarning);
+            this.Controls.Add(this.lblLoginWarning);
             this.Controls.Add(this.lblNameWarning);
             this.Controls.Add(this.btnSubscribe);
             this.Controls.Add(this.btnCancel);
@@ -222,6 +266,7 @@
             this.Controls.Add(this.label1);
             this.Name = "NewClientForm";
             this.Text = "NewClient";
+            this.Load += new System.EventHandler(this.NewClientForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,6 +290,10 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSubscribe;
         private System.Windows.Forms.Label lblNameWarning;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblLoginWarning;
+        private System.Windows.Forms.Label lblAddressWarning;
+        private System.Windows.Forms.Label lblCreditCardWarning;
+        private System.Windows.Forms.Label lblPasswordWarning;
+        private System.Windows.Forms.Label lblPasswordCheckWarning;
     }
 }

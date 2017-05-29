@@ -33,7 +33,7 @@ namespace Supermarket
                 {
                     lblLoginWarning.Visible = false;
                     this.Visible = false;
-                    Main main = new Main();
+                    Main main = new Main(txtLogin.Text.ToString());
                     main.ShowDialog();
                     main.Close();
                     this.Visible = true;

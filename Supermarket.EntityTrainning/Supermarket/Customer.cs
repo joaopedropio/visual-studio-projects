@@ -13,7 +13,7 @@ namespace Supermarket
         CreditCard = 16,
         Login = 6
     }
-    class Customer
+    public class Customer
     {
       
         public int Id { get; set; }

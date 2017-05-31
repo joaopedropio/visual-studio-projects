@@ -11,11 +11,13 @@ using System.Windows.Forms;
 
 namespace Supermarket
 {
+    public static class OrderQueFunciona
+    {
+        public static Order Order;
+    }
     public partial class Main : Form
     {
-        private Order _order;
         private List<Product> _productCatalog;
-
         public Main(string login)
         {
             InitializeComponent();
@@ -23,7 +25,6 @@ namespace Supermarket
             InitializeProductDB();
             InitializeProductsList();
         }
-
         private void InitializeProductDB()
         {
             using (SupermarketContext context = new SupermarketContext())
@@ -31,19 +32,16 @@ namespace Supermarket
                 this._productCatalog = context.Products.ToList();
             }
         }
-
-
         private void InitializeCart(string login)
         {
-            this._order = new Order();
+            OrderQueFunciona.Order = new Order();
             using (SupermarketContext context = new SupermarketContext())
             {
-                this._order.Customer = context.Customers.Where(n => n.Login == login).FirstOrDefault();
+                OrderQueFunciona.Order.Customer = context.Customers.Where(n => n.Login == login).FirstOrDefault();
             }
-            this._order.Date = new DateTime();
-            this._order.List = new Dictionary<int, Product>();
+            OrderQueFunciona.Order.Date = new DateTime();
+            OrderQueFunciona.Order.List = new Dictionary<Product, int>();
         }
-
         private void InitializeProductsList()
         {
             using (SupermarketContext context = new SupermarketContext())
@@ -59,7 +57,6 @@ namespace Supermarket
                 this.cbProducts.Items.AddRange(nameList);
             }
         }
-
         private void cbProducts_SelectedIndexChanged(object sender, EventArgs e)
         {
             lblProductAdded.Visible = false;
@@ -80,17 +77,25 @@ namespace Supermarket
         private void btnBuy_Click(object sender, EventArgs e)
         {
             int qtd = int.Parse(txtQuantity.Text.ToString());
-            Product product = new Product();
-            product = _productCatalog.Where(n => n.Id == int.Parse(lblProductId.Text.ToString())).FirstOrDefault();
+            Product product = _productCatalog.Where(n => n.Id == int.Parse(lblProductId.Text.ToString())).FirstOrDefault();
             lblProductAdded.Visible = true;
             try
             {
-                this._order.List.Add(qtd, product);
+                OrderQueFunciona.Order.List.Add(product, qtd);
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("Produto já inserido! Para adicionar mais, vá em cart e aumente a quantidade de items");
+                MessageBox.Show("Produto já ineserido! Para adicionar mais, vá em cart e aumente a quantidade de items");
             }
+        }
+
+        private void btnCart_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CartForm cartform = new CartForm();
+            cartform.ShowDialog();
+            cartform.Close();
+            this.Show();
         }
     }
 }

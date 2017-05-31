@@ -88,6 +88,7 @@ namespace Supermarket
             this.btnCart.TabIndex = 7;
             this.btnCart.Text = "Carrinho";
             this.btnCart.UseVisualStyleBackColor = true;
+            this.btnCart.Click += new System.EventHandler(this.btnCart_Click);
             // 
             // txtProductDescription
             // 

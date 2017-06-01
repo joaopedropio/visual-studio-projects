@@ -1,20 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Supermarket
 {
-    public static class OrderQueFunciona
-    {
-        public static Order Order;
-    }
     public partial class Main : Form
     {
         private List<Product> _productCatalog;
@@ -73,22 +64,20 @@ namespace Supermarket
                 lblProductName.Visible = true;
             }
         }
-
         private void btnBuy_Click(object sender, EventArgs e)
         {
-            int qtd = int.Parse(txtQuantity.Text.ToString());
-            Product product = _productCatalog.Where(n => n.Id == int.Parse(lblProductId.Text.ToString())).FirstOrDefault();
+            int qtd = int.Parse(txtQuantity.Text);
+            Product product = _productCatalog.FirstOrDefault(n => n.Id == int.Parse(lblProductId.Text));
             lblProductAdded.Visible = true;
             try
             {
                 OrderQueFunciona.Order.List.Add(product, qtd);
             }
-            catch (Exception ex)
+            catch
             {
                 MessageBox.Show("Produto já ineserido! Para adicionar mais, vá em cart e aumente a quantidade de items");
             }
         }
-
         private void btnCart_Click(object sender, EventArgs e)
         {
             this.Hide();

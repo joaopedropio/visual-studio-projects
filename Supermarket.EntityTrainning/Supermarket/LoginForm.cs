@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Supermarket
@@ -17,13 +12,6 @@ namespace Supermarket
         {
             InitializeComponent();
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            
-
-        }
-
         private void btnOk_Click(object sender, EventArgs e)
         {
             using (SupermarketContext context = new SupermarketContext())
@@ -46,35 +34,18 @@ namespace Supermarket
             }
 
         }
-
         public string Hash(string password)
         {
             SHA256 hash = new SHA256Managed();
             byte[] hashedPassword = hash.ComputeHash(Encoding.UTF8.GetBytes(txtPassword.Text.ToString()));
             return Encoding.UTF8.GetString(hashedPassword);
         }
-
-        private void lblLogin_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnNewCustomer_Click(object sender, EventArgs e)
         {
             this.Visible = false;
             NewClientForm newclientform = new NewClientForm();
             newclientform.ShowDialog();
             this.Visible = true;
-        }
-
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

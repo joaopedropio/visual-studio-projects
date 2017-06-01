@@ -53,7 +53,7 @@ namespace Supermarket
             // cbProducts
             // 
             this.cbProducts.FormattingEnabled = true;
-            this.cbProducts.Location = new System.Drawing.Point(69, 46);
+            this.cbProducts.Location = new System.Drawing.Point(69, 25);
             this.cbProducts.Name = "cbProducts";
             this.cbProducts.Size = new System.Drawing.Size(306, 21);
             this.cbProducts.TabIndex = 2;
@@ -63,7 +63,7 @@ namespace Supermarket
             // 
             this.lblProductName.AutoSize = true;
             this.lblProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductName.Location = new System.Drawing.Point(63, 113);
+            this.lblProductName.Location = new System.Drawing.Point(63, 83);
             this.lblProductName.Name = "lblProductName";
             this.lblProductName.Size = new System.Drawing.Size(180, 31);
             this.lblProductName.TabIndex = 3;
@@ -72,7 +72,7 @@ namespace Supermarket
             // 
             // btnBuy
             // 
-            this.btnBuy.Location = new System.Drawing.Point(494, 399);
+            this.btnBuy.Location = new System.Drawing.Point(528, 359);
             this.btnBuy.Name = "btnBuy";
             this.btnBuy.Size = new System.Drawing.Size(148, 66);
             this.btnBuy.TabIndex = 5;
@@ -82,7 +82,7 @@ namespace Supermarket
             // 
             // btnCart
             // 
-            this.btnCart.Location = new System.Drawing.Point(522, 25);
+            this.btnCart.Location = new System.Drawing.Point(528, 12);
             this.btnCart.Name = "btnCart";
             this.btnCart.Size = new System.Drawing.Size(138, 60);
             this.btnCart.TabIndex = 7;
@@ -92,7 +92,7 @@ namespace Supermarket
             // 
             // txtProductDescription
             // 
-            this.txtProductDescription.Location = new System.Drawing.Point(51, 159);
+            this.txtProductDescription.Location = new System.Drawing.Point(53, 128);
             this.txtProductDescription.Multiline = true;
             this.txtProductDescription.Name = "txtProductDescription";
             this.txtProductDescription.ReadOnly = true;
@@ -103,7 +103,7 @@ namespace Supermarket
             // 
             this.lblRs.AutoSize = true;
             this.lblRs.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRs.Location = new System.Drawing.Point(491, 159);
+            this.lblRs.Location = new System.Drawing.Point(521, 128);
             this.lblRs.Name = "lblRs";
             this.lblRs.Size = new System.Drawing.Size(41, 25);
             this.lblRs.TabIndex = 9;
@@ -114,7 +114,7 @@ namespace Supermarket
             // 
             this.lblPrice.AutoSize = true;
             this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(536, 159);
+            this.lblPrice.Location = new System.Drawing.Point(568, 128);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(61, 25);
             this.lblPrice.TabIndex = 10;
@@ -125,7 +125,7 @@ namespace Supermarket
             // 
             this.lblQuantity.AutoSize = true;
             this.lblQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuantity.Location = new System.Drawing.Point(494, 323);
+            this.lblQuantity.Location = new System.Drawing.Point(521, 269);
             this.lblQuantity.Name = "lblQuantity";
             this.lblQuantity.Size = new System.Drawing.Size(63, 25);
             this.lblQuantity.TabIndex = 11;
@@ -133,7 +133,7 @@ namespace Supermarket
             // 
             // txtQuantity
             // 
-            this.txtQuantity.Location = new System.Drawing.Point(564, 327);
+            this.txtQuantity.Location = new System.Drawing.Point(601, 275);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(65, 20);
             this.txtQuantity.TabIndex = 12;
@@ -143,7 +143,7 @@ namespace Supermarket
             // 
             this.lblProductAdded.AutoSize = true;
             this.lblProductAdded.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductAdded.Location = new System.Drawing.Point(110, 490);
+            this.lblProductAdded.Location = new System.Drawing.Point(102, 461);
             this.lblProductAdded.Name = "lblProductAdded";
             this.lblProductAdded.Size = new System.Drawing.Size(393, 25);
             this.lblProductAdded.TabIndex = 13;
@@ -153,7 +153,7 @@ namespace Supermarket
             // lblProductId
             // 
             this.lblProductId.AutoSize = true;
-            this.lblProductId.Location = new System.Drawing.Point(322, 128);
+            this.lblProductId.Location = new System.Drawing.Point(323, 98);
             this.lblProductId.Name = "lblProductId";
             this.lblProductId.Size = new System.Drawing.Size(18, 13);
             this.lblProductId.TabIndex = 14;
@@ -164,7 +164,7 @@ namespace Supermarket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(691, 536);
+            this.ClientSize = new System.Drawing.Size(784, 511);
             this.Controls.Add(this.lblProductId);
             this.Controls.Add(this.lblProductAdded);
             this.Controls.Add(this.txtQuantity);

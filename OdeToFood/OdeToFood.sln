@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{32C1855B-264E-4E1E-93F5-7797B01AEE6E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A2CCCD29-E4A2-4771-805D-5F8564F5A497}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "OdeToFood", "src\OdeToFood\OdeToFood.xproj", "{115753A5-2DF1-4688-9367-2AA733048344}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{115753A5-2DF1-4688-9367-2AA733048344}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{115753A5-2DF1-4688-9367-2AA733048344}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{115753A5-2DF1-4688-9367-2AA733048344}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{115753A5-2DF1-4688-9367-2AA733048344}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{115753A5-2DF1-4688-9367-2AA733048344} = {32C1855B-264E-4E1E-93F5-7797B01AEE6E}
+	EndGlobalSection
+EndGlobal

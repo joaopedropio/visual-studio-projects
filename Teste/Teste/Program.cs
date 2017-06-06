@@ -10,36 +10,24 @@ namespace Teste
     {
         static void Main(string[] args)
         {
-            double[] output = Tribonacci(new double[] { 1, 1, 1 }, 8);
+            long output = MaxRot(56789);
             return;
         }
-        static double[] Tribonacci(double[] signature, int n)
+        public static long MaxRot(long n)
         {
-            if (n == 0)
+            List<char[]> list = new List<char[]>();
+            char[] number = n.ToString().ToArray();
+            for (int i = 0; i < number.Length; i++)
             {
-                return new double[] { 0 };
-            }
-            else if (n <= 3)
-            {
-                double[] temp = new double[n];
-                for(int i = 0; i < n; i++)
+                char aux = number[i];
+                for (int j = i; j < number.Length - 1; j++)
                 {
-                    temp[i] = signature[i];
+                    number[j] = number[j + 1];
                 }
+                number[number.Length - 1] = aux;
+                list.Add(number);
             }
-            // hackonacci me
-            // if n==0, then return an array of length 1, containing only a 0
-            double fibanterior = 0, fib1 = 0, fib2 = 0;
-            double[] output = new double[n];
-            signature.CopyTo(output, 0);
-            for (int i = 3; i < n; i++)
-            {
-                fibanterior = output[i - 3];
-                fib1 = output[i - 2];
-                fib2 = output[i - 1];
-                output[i] = fibanterior + fib1 + fib2;
-            }
-            return output;
+            return long.Parse(new string(list.Max()));
         }
     }
 }

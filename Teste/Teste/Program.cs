@@ -8,26 +8,19 @@ namespace Teste
 {
     class Program
     {
-        static void Main(string[] args)
+
+        public static void Main()
         {
-            long output = MaxRot(56789);
+            int a = 3;
+            int b = 3;
+            Console.WriteLine((a == b) ? "true" : "false");
+            Console.WriteLine((object)a == (object)b ? "true" : "false");
+            Console.WriteLine((IComparable<int>)a == (IComparable<int>)b ? "true" : "false");
+            Console.WriteLine(string.Equals("apple piE", "apple pie",StringComparison.InvariantCultureIgnoreCase));
+            Console.WriteLine(4.0000001f == 4.0000000f);
+            int basic= int.Parse(Console.ReadLine());
+            Console.WriteLine(basic);
             return;
-        }
-        public static long MaxRot(long n)
-        {
-            List<char[]> list = new List<char[]>();
-            char[] number = n.ToString().ToArray();
-            for (int i = 0; i < number.Length; i++)
-            {
-                char aux = number[i];
-                for (int j = i; j < number.Length - 1; j++)
-                {
-                    number[j] = number[j + 1];
-                }
-                number[number.Length - 1] = aux;
-                list.Add(number);
-            }
-            return long.Parse(new string(list.Max()));
         }
     }
 }

@@ -20,5 +20,10 @@ namespace SocialMovie.Controllers
         {
             return "This is the Welcome action method...";
         }
+
+        public IActionResult Rapaz()
+        {
+            return View();
+        }
     }
 }

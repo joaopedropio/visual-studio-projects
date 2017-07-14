@@ -1,0 +1,34 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Adaptive Streaming with HTML5";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title> @ViewBag.Title</title>
+    <script src="js/dash.all.min.js"></script>
+    <style>
+        #videoPlayer {
+            width: 720px;
+            height: 480px;
+        }
+    </style>
+</head>
+<body onload="setupVideo()" align='center'>
+    <h1>@ViewBag.Title</h1>
+    <video id="videoPlayer" controls></video>
+    <script>
+        // setup the video element and attach it to the Dash player
+        function setupVideo() {
+          var url = "video/stream.mpd";
+          var player = dashjs.MediaPlayer().create();
+          player.initialize(document.querySelector("#videoPlayer"), url, true);
+        }
+
+    </script>
+</body>
+
+</html>
